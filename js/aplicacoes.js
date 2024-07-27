@@ -281,7 +281,7 @@ App.aplicacoes = (function ()
         "#0fc",
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/22)) + -25,
-        290
+        310
       ]);
 
 

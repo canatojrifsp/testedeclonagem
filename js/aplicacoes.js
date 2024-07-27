@@ -630,7 +630,7 @@ App.aplicacoes = (function ()
     // S = deslocamento sobre o plano inclinado - hipotenusa
     // ca = variação de X - cateto adjacente
     // co = variação de Y - cateto oposto
-    // S = S0 + V0t + a.t²
+    // S = S0 + V0t + (1/2)a.t²
 
     var S0 = 0; // Posição inicial é sempre 0
     var V0 = 0; // Velocidade inicial é sempre 0
@@ -639,7 +639,7 @@ App.aplicacoes = (function ()
     // Posição inicial é sempre Zero, pois vamos considerar como se fosse o o movimento sempre a partir do ponto inicial
     // O mesmo vale para a velocidade inicial, sempre zero, pela mesma razão.
     // O tempo atualizado com a aceleração vão garantir o espaço e velocidade corretos no fim
-    var S = 0 + 0*t + aceleracaoAtualParaAnimacao * Math.pow(t, 2);
+    var S = 0 + 0*t + 0.5*aceleracaoAtualParaAnimacao * Math.pow(t, 2);
     var ca = cosseno * (S * 3779.527559); // Somar à coordenada X dos pontos para redesenhar
     var co = seno * (S * 3779.527559); // Somar à coordenada Y dos pontos para redesenhar
     

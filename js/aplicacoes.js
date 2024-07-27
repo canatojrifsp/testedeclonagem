@@ -691,7 +691,7 @@ App.aplicacoes = (function ()
     desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
-    var parar = pontoA1[1] >= Y_ZERO + 400 || pontoA1[0] >= X_ZERO + 600;
+    var parar = pontoA1[1] >= Y_ZERO + 100 || pontoA1[0] >= X_ZERO + 300;
 
     if(parar){ // TODO Fazer a validação correta aqui 
       document.getElementById("voltar").disabled = false;

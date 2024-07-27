@@ -274,17 +274,6 @@ App.aplicacoes = (function ()
         295
       ]);
 
-      mensagem = "Velocidade: ";
-      App.strategiesTela.construtorTexto.executa([
-        "2",
-        mensagem,
-        "#0fc",
-        "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/22)) + -25,
-        310
-      ]);
-
-
       mensagem = "Considerando: ";
       App.strategiesTela.construtorTexto.executa([
         "2",

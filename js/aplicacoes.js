@@ -630,16 +630,16 @@ App.aplicacoes = (function ()
     // S = deslocamento sobre o plano inclinado - hipotenusa
     // ca = variação de X - cateto adjacente
     // co = variação de Y - cateto oposto
-    // S = S0 + V0t + (1/2)a.t²
+    // S = S0 + V0t + (1/2)a.t²; correção CANATO
 
     var S0 = 0; // Posição inicial é sempre 0
     var V0 = 0; // Velocidade inicial é sempre 0
-    var t = (currentTime - initialTime)/30000;
+    var t = (currentTime - initialTime)/10000; //correção CANATO
 
     // Posição inicial é sempre Zero, pois vamos considerar como se fosse o o movimento sempre a partir do ponto inicial
     // O mesmo vale para a velocidade inicial, sempre zero, pela mesma razão.
     // O tempo atualizado com a aceleração vão garantir o espaço e velocidade corretos no fim
-    var S = 0 + 0*t + 0.5*aceleracaoAtualParaAnimacao * Math.pow(t, 2);
+    var S = 0 + 0*t + 0.5*aceleracaoAtualParaAnimacao * Math.pow(t, 2); //correção CANATO
     var ca = cosseno * (S * 3779.527559); // Somar à coordenada X dos pontos para redesenhar
     var co = seno * (S * 3779.527559); // Somar à coordenada Y dos pontos para redesenhar
     
@@ -691,7 +691,7 @@ App.aplicacoes = (function ()
     desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
-    var parar = pontoA1[1] >= Y_ZERO + 500 || pontoA1[0] >= X_ZERO + 700;
+    var parar = pontoA1[1] >= Y_ZERO + 400 || pontoA1[0] >= X_ZERO + 600;
 
     if(parar){ // TODO Fazer a validação correta aqui 
       document.getElementById("voltar").disabled = false;

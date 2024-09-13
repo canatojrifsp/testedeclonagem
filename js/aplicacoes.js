@@ -645,7 +645,8 @@ App.aplicacoes = (function ()
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
       var n = py;
-      var fAtrito = py * coeficienteAtrito;
+      //var fAtrito = py * coeficienteAtrito;
+      var fAtrito = Math.min(py * coeficienteAtrito, px);
       var a = g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal)));
 
       // parseFloat define quantas casas decimais são exibidas
@@ -664,7 +665,7 @@ App.aplicacoes = (function ()
     // S = deslocamento sobre o plano inclinado - hipotenusa
     // ca = variação de X - cateto adjacente
     // co = variação de Y - cateto oposto
-    // S = S0 + V0t + a.t²
+    // S = S0 + V0t + 0.5*a.t² Correção Canato
 
     var S0 = 0; // Posição inicial é sempre 0
     var V0 = 0; // Velocidade inicial é sempre 0

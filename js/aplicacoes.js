@@ -435,7 +435,7 @@ App.aplicacoes = (function ()
       
       mensagem = coeficienteAtritoMax; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
-        "1",
+        "2",
         mensagem,
         "#FFF",
         "Bold 16px Trebuchet MS",

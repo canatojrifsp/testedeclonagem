@@ -306,7 +306,7 @@ App.aplicacoes = (function ()
         358
       ]);
 
-      mensagem = "Coeficiente de Atrito μ = 0,01";
+      mensagem = "Coef Atrito Cinético μ = 0,01";
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -316,6 +316,16 @@ App.aplicacoes = (function ()
         380
       ]);
     
+      mensagem = "Coef Atrito Estático μ = ";
+      App.strategiesTela.construtorTexto.executa([
+        "2",
+        mensagem,
+        "#0fc",
+        "Bold 16px Trebuchet MS",
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/12 + ((BASE/22)) - 25,
+        380
+      ]);
+
     //Base do plano inclinado - no canvas 2 pois não precisa redesenhar
     desenhaReta((X_ZERO)-(BASE), Y_ZERO, (X_ZERO), Y_ZERO, "#FFF", 4, "2");
 
@@ -639,6 +649,7 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var coeficienteAtrito = 0.5;
+      var coeficienteAtritoMax = Math.tan(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;

@@ -306,7 +306,7 @@ App.aplicacoes = (function ()
         358
       ]);
 
-      mensagem = "Coef Atrito Cinético μ = 0,01";
+      mensagem = "Coef Atr Cin μ = 0,01";
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -316,7 +316,7 @@ App.aplicacoes = (function ()
         380
       ]);
     
-      mensagem = "Coef Atrito Estático μ = ";
+      mensagem = "Coef Atr Est μ = ";
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,

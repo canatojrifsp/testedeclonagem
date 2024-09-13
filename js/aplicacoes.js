@@ -650,7 +650,7 @@ App.aplicacoes = (function ()
       var a = g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal)));
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(2)];
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(2), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(2)];
 
   }
 

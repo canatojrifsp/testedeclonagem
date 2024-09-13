@@ -306,7 +306,7 @@ App.aplicacoes = (function ()
         358
       ]);
 
-      mensagem = "Coef Atr Cin μ = 0,01";
+      mensagem = "Coef Atr Cin μ = 0,01"; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -316,7 +316,7 @@ App.aplicacoes = (function ()
         380
       ]);
     
-      mensagem = "Coef Atr Est μ = ";
+      mensagem = "Coef Atr Est μ = "; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -431,6 +431,16 @@ App.aplicacoes = (function ()
         "Bold 16px Trebuchet MS",
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/18)*6) - 7,
         310
+      ]);
+      
+      mensagem = coeficienteAtritoMax; //modificação Canato
+      App.strategiesTela.construtorTexto.executa([
+        "1",
+        mensagem,
+        "#FFF",
+        "Bold 16px Trebuchet MS",
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/4 + ((BASE/22)*6) - 25,
+        380
       ]);
   }
 

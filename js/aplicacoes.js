@@ -638,7 +638,7 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var coeficienteAtrito = 0.2;
+      var coeficienteAtrito = 0.01;
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;

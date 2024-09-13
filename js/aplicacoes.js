@@ -648,9 +648,10 @@ App.aplicacoes = (function ()
       //var fAtrito = py * coeficienteAtrito;
       var fAtrito = Math.min(py * coeficienteAtrito, px); // modificação Canato
       var a = g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal)));
+      var fAtrito = Math.max(g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal))), 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(2), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(2)];
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1)];
 
   }
 

@@ -340,7 +340,7 @@ App.aplicacoes = (function ()
 
     var calculos = calculaForcasAceleracao((30*CENTO_OITENTA)/180);  
     // linha a seguir determina quantas variáveis calculadas podem ficar visíveis na tela  
-    reescreve(30, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6]); //modificação Canato
+    reescreve(30, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5]); //modificação Canato
     
     // Guarda dados iniciais para animação
     aceleracaoAtualParaAnimacao = calculos[4];
@@ -356,7 +356,7 @@ App.aplicacoes = (function ()
     ]);
   }
   
-  var reescreve = function(angulo, p, px, py, n, a, fAtrito){ //modificação Canato
+  var reescreve = function(angulo, p, px, py, n, a, fAtrito, coeficienteAtritoMax){ //modificação Canato
 
     // Guarda para a animação
     anguloRadAtualParaAnimacao = (angulo*CENTO_OITENTA)/180;

@@ -433,7 +433,7 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = coeficienteAtritoMax;
+      mensagem = fAtrito + " N"; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,
@@ -658,7 +658,7 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var coeficienteAtrito = 0.5;
+      var coeficienteAtrito = 0.5; // modificação Canato
       var coeficienteAtritoMax = p * Math.sin(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;

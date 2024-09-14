@@ -457,6 +457,7 @@ App.aplicacoes = (function ()
   //constantes
     var massa = 10;
     var g = 9.8;
+    var coeficienteAtritoMax = p * Math.sin(angFinal); //modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);

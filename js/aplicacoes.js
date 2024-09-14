@@ -355,8 +355,8 @@ App.aplicacoes = (function ()
       380
     ]);
   }
-
-  var reescreve = function(angulo, p, px, py, n, a, fAtrito){
+  
+  var reescreve = function(angulo, p, px, py, n, a, fAtrito, coeficienteAtritoMax){ //modificação Canato
 
     // Guarda para a animação
     anguloRadAtualParaAnimacao = (angulo*CENTO_OITENTA)/180;

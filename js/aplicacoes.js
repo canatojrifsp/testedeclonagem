@@ -650,14 +650,13 @@ App.aplicacoes = (function ()
       pontoG[1] + 10
     ]);
   
-
   App.strategiesTela.construtorTexto.executa([
     "3",
     "Fat",
     "#0fc",
     "Bold 14px Trebuchet MS",
-    pontoHA[0] + 5,
-    pontoHA[1] + 5
+    pontoHA[0] + 10,
+    pontoHA[1] + 10
   ]);
 
   }

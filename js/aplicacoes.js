@@ -891,7 +891,7 @@ App.aplicacoes = (function ()
       var ponto = App.strategiesCalculadora.ponto.calcula([angRad, X_ZERO, Y_ZERO, BASE]);
       reDesenha(ponto[0], ponto[1], angRad);
       // linha a seguir determina quantas variáveis calculadas podem ficar visíveis na tela  
-      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5]);
+      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6]); //modificação Canato
 
       var velocidadeTexto = "V = 0.0 m/s";
       App.strategiesTela.construtorTexto.executa([

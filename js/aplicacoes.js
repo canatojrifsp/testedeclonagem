@@ -573,6 +573,8 @@ App.aplicacoes = (function ()
     var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
     var pontoP = App.strategiesCalculadora.ponto.calcula([angRad + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad + CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
+    var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
+    var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");
@@ -596,8 +598,8 @@ App.aplicacoes = (function ()
 
     // Reta - Fat (oposto a Px) -  modificação Canato
     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHA[1], "#0fc", 3, "3");
-    desenhaReta(pontoO[0], pontoO[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
-    desenhaReta(pontoP[0], pontoP[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
+    desenhaReta(pontoOA[0], pontoOA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
+    desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHA);
 
@@ -659,7 +661,7 @@ App.aplicacoes = (function ()
   ]);
 
   }
-  
+
   var calculaForcasAceleracao = function(angFinal){ 
 /*
       Ângulo entre o Plano Móvel e a Base: 

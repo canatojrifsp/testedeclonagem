@@ -655,8 +655,8 @@ App.aplicacoes = (function ()
     "Fat",
     "#0fc",
     "Bold 14px Trebuchet MS",
-    pontoHA[0] + 2,
-    pontoHA[1] + 2
+    pontoHA[0],
+    pontoHA[1]
   ]);
 
   }

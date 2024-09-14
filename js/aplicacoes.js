@@ -30,7 +30,6 @@ App.aplicacoes = (function ()
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
-  var coeficienteAtritoMax = p * Math.sin(angFinal); //modificação Canato
   
   // Coordenadas dos pontos para desenhar o corpo sobre o plano
   var pontoA;

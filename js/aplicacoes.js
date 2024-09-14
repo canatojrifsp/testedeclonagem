@@ -435,7 +435,7 @@ App.aplicacoes = (function ()
       
       mensagem = coeficienteAtritoMax; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
-        "2",
+        "1",
         mensagem,
         "#FFF",
         "Bold 16px Trebuchet MS",
@@ -672,7 +672,7 @@ App.aplicacoes = (function ()
       var a = Math.max(g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal))), 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1)];
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1), parseFloat(coeficienteAtritoMax).toFixed(1)]; //modificação canato
 
   }
 

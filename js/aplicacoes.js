@@ -356,7 +356,7 @@ App.aplicacoes = (function ()
     ]);
   }
   
-  var reescreve = function(angulo, p, px, py, n, a, fAtrito, coeficienteAtritoMax){ //modificação Canato
+  var reescreve = function(angulo, p, px, py, n, a, fAtrito){ //modificação Canato
 
     // Guarda para a animação
     anguloRadAtualParaAnimacao = (angulo*CENTO_OITENTA)/180;
@@ -433,7 +433,7 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = fAtrito; //modificação Canato
+      mensagem = coeficienteAtritoMax; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,

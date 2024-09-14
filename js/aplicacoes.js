@@ -433,7 +433,7 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = fAtrito + " N"; //modificação Canato
+      mensagem = fAtrito; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,

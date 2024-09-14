@@ -659,7 +659,7 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var coeficienteAtrito = 0.5;
-      var coeficienteAtritoMax = Math.sin(angFinal); //modificação Canato
+      var coeficienteAtritoMax = p * Math.sin(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;

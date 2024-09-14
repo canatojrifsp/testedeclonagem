@@ -433,7 +433,7 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = coeficienteAtritoMax; //modificação Canato
+      mensagem = coeficienteAtritoMax + " N"; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,

@@ -486,7 +486,7 @@ App.aplicacoes = (function ()
     var Fat = Math.min(Fatd, px); // modificação Canato
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    BASE_Fat = (objCanvas.canvasWidth)/(reduzdimensao/Fat); // modificação Canato
+    BASE_Fat = (objCanvas.canvasWidth)/(reduzdimensao*Fat); // modificação Canato
 
       
     //limpeza inicial da tela, para reconstrução
@@ -691,7 +691,7 @@ App.aplicacoes = (function ()
 
   App.strategiesTela.construtorTexto.executa([ // modificação Canato
     "3",
-    "Fd",
+    "Fat",
     "#0fc",
     "Bold 14px Trebuchet MS",
     pontoHB[0] - 5,

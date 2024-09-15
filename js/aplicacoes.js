@@ -474,7 +474,7 @@ App.aplicacoes = (function ()
   //constantes
     var massa = 10;
     var g = 9.8;
-    var μd = 0.5; // coef atrito dinamico modificação Canato
+    var μd = 0.2; // coef atrito dinamico modificação Canato
     var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
@@ -767,7 +767,7 @@ App.aplicacoes = (function ()
   var animarBloco = function (){
 
     document.getElementById("animar").disabled = true;
-    document.getElementById("voltar").disabled = false;
+    document.getElementById("voltar").disabled = false; // modificação Canato para que o botão voltar fique ativo ao longo do movimento.
 
     //desvincula os eventos existentes (todos os keydowns)
     objCanvas.doc.unbind("keydown");

@@ -480,7 +480,7 @@ App.aplicacoes = (function ()
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
     var n = p * Math.cos(angRad);
-    var a = Math.min(px/massa) - (Fatd/massa, 0); // modificação Canato
+    var a = Math.min((px/massa) - (Fatd/massa, 0)); // modificação Canato
     var Fatd = μd*n
     var Fate = μe*n
     var Fat = Math.min(Fatd, px); // modificação Canato
@@ -728,7 +728,7 @@ App.aplicacoes = (function ()
       var Fatd = μd*n
       var Fate = μe*n
       var Fat = Math.min(Fatd, px); // modificação Canato
-      var a = Math.min(px/massa) - (Fatd/massa, 0); // modificação Canato
+      var a = Math.min((px/massa) - (Fatd/massa, 0)); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μd).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato

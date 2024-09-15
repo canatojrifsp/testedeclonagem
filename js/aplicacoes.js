@@ -15,7 +15,7 @@ App.aplicacoes = (function ()
   var BASE;
   var BASE_Py_inicial;
   var BASE_Px_inicial;
-  var BASE_Fatd_inicial;
+  var BASE_Fat_inicial;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -30,7 +30,7 @@ App.aplicacoes = (function ()
   var angRadInicial = TRINTA;
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
-  var Fatd_inicial = p_inicial * Math.sin(angRadInicial);
+  var Fat_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
   // Coordenadas dos pontos para desenhar o corpo sobre o plano
@@ -45,7 +45,7 @@ App.aplicacoes = (function ()
   var aceleracaoAtualParaAnimacao;
   var BASE_Py;
   var BASE_Px;
-  var BASE_Fatd;
+  var BASE_Fat;
   var animacao;
 
   // Variáveis para animação
@@ -81,7 +81,7 @@ App.aplicacoes = (function ()
     aceleracaoAtualParaAnimacao = null;
     BASE_Py = null;
     BASE_Px = null;
-    BASE_Fatd = null; // modificação Canato
+    BASE_Fat = null; // modificação Canato
     initialTime = null;
     currentTime = null;
 
@@ -91,7 +91,7 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Fatd_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fatd_inicial);
+    BASE_Fat_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
 
 
     document.getElementById("animar").onclick = function() {
@@ -362,7 +362,7 @@ App.aplicacoes = (function ()
     ]);
   }
   
-  var reescreve = function(angulo, p, px, py, n, a, fAtrito, coeficienteAtritoMax){ //modificação Canato
+  var reescreve = function(angulo, p, px, py, n, a, Fat, coeficienteAtritoMax){ //modificação Canato
 
     // Guarda para a animação
     anguloRadAtualParaAnimacao = (angulo*CENTO_OITENTA)/180;
@@ -429,7 +429,7 @@ App.aplicacoes = (function ()
       285
     ]);
 
-    mensagem = fAtrito + " N";
+    mensagem = Fat + " N";
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,
@@ -472,9 +472,10 @@ App.aplicacoes = (function ()
     var a = g * Math.sin(angRad);
     var Fatd = μd*n
     var Fate = μe*n
+    var Fat = Math.min(Fatd, px); // modificação Canato
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    BASE_Fatd = (objCanvas.canvasWidth)/(reduzdimensao/Fatd); // modificação Canato
+    BASE_Fat = (objCanvas.canvasWidth)/(reduzdimensao/Fat); // modificação Canato
 
       
     //limpeza inicial da tela, para reconstrução
@@ -525,7 +526,7 @@ App.aplicacoes = (function ()
     desenhaCorpo(pontoA, pontoB, pontoC, pontoD, "#e01010");
 
     // Desenha as forças
-    desenhaForcas(angRad, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fatd);    //modificação Canato
+    desenhaForcas(angRad, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fat);    //modificação Canato
 
   }// Fim Função Redesenha
 
@@ -555,7 +556,7 @@ App.aplicacoes = (function ()
     objCanvas.ctx3.closePath();
   }
 
-  var desenhaForcas = function(angRad, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fatd){
+  var desenhaForcas = function(angRad, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fat){
     // Ângulo entre Py e P
     var angRetaP = CENTO_OITENTA-(DUZENTOS_SETENTA-angRad)
 
@@ -585,9 +586,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //ponto HA ... Fate  ... -180 para girar no antihorário modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto OA ... seta Fate modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto PA ... seta Fate modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/10)*4]); //ponto HB ... Fatd -180 para girar no antihorario ...  modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto OB ... seta Fatd modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto PB ... seta Fatd modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fat/10)*4]); //ponto HB ... Fatd -180 para girar no antihorario ...  modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fat/10)*3.5]); //ponto OB ... seta Fatd modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fat/10)*3.5]); //ponto PB ... seta Fatd modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");
@@ -715,11 +716,11 @@ App.aplicacoes = (function ()
       var n = py;
       var Fatd = μd*n
       var Fate = μe*n
-      var fAtrito = Math.min(Fatd, px); // modificação Canato
+      var Fat = Math.min(Fatd, px); // modificação Canato
       var a = Math.max(px/massa) - (Fatd/massa, 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
 
   }
 
@@ -794,7 +795,7 @@ App.aplicacoes = (function ()
     desenhaCorpo(pontoA1, pontoB1, pontoC1, pontoD1, "#e01010");
 
     // Desenha as forças
-    desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py, BASE_Fatd);
+    desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py, BASE_Fat);
 
     var velocidadeTexto = "V = " + deslocamentoEVelocidade[2] + " m/s";
     App.strategiesTela.construtorTexto.executa([
@@ -842,7 +843,7 @@ App.aplicacoes = (function ()
     desenhaCorpo(pontoA, pontoB, pontoC, pontoD, "#e01010");
 
     // Desenha as forças
-    desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fatd);
+    desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA, pontoC, BASE_Px, BASE_Py, BASE_Fat);
 
     var velocidadeTexto = "V = 0.0 m/s";
     App.strategiesTela.construtorTexto.executa([

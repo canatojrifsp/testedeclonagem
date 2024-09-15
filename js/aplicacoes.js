@@ -819,7 +819,7 @@ App.aplicacoes = (function ()
     ]);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
-    var parar = pontoA1[1] >= Y_ZERO + 150 || pontoA1[0] >= X_ZERO + 200;
+    var parar = pontoA1[1] >= Y_ZERO + 150 || pontoA1[0] >= X_ZERO + 150;
 
     if(parar){ // TODO Fazer a validação correta aqui 
      document.getElementById("voltar").disabled = false;
@@ -867,7 +867,7 @@ App.aplicacoes = (function ()
     ]);
 
     document.getElementById("animar").disabled = false;
-    document.getElementById("voltar").disabled = false;
+    document.getElementById("voltar").disabled = true;
 
     ajustaKeyDown();
   }

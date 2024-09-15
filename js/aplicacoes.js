@@ -819,7 +819,7 @@ App.aplicacoes = (function ()
     ]);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
-    var parar = pontoA1[1] >= Y_ZERO + 100 || pontoA1[0] >= X_ZERO + 100;
+    var parar = pontoA1[1] >= Y_ZERO || pontoA1[0] >= X_ZERO;
 
     if(parar){ // TODO Fazer a validação correta aqui 
      document.getElementById("voltar").disabled = false;

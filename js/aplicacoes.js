@@ -616,8 +616,8 @@ App.aplicacoes = (function ()
     //desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
 
      // Reta - Fatcinetico (oposto e de menor intensidade que Px) -  modificação Canato
-     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHB[1], "#fff", 3, "3");
-     desenhaReta(pontoOB[0], pontoOB[1], pontoHA[0], pontoHB[1], "#fff", 3, "3");
+     desenhaReta(NovoXZero, NovoYZero, pontoHB[0], pontoHB[1], "#fff", 3, "3");
+     desenhaReta(pontoOB[0], pontoOB[1], pontoHB[0], pontoHB[1], "#fff", 3, "3");
      desenhaReta(pontoPB[0], pontoPB[1], pontoHB[0], pontoHB[1], "#fff", 3, "3");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHB);

@@ -457,14 +457,19 @@ App.aplicacoes = (function ()
   //constantes
     var massa = 10;
     var g = 9.8;
-    var coeficienteAtritoMax = Math.tan(angFinal); //modificação Canato
+    var μd = 0.5; // coef atrito dinamico modificação Canato
+    var μe = Math.tan(angFinal); //coeficiente atrito estatico para c;aculo da máxima Fatesttatica modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
     var n = p * Math.cos(angRad);
     var a = g * Math.sin(angRad);
+    var Fatd = μd*n
+    var Fate = μe*n
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
+    BASE_Fatd = (objCanvas.canvasWidth)/(reduzdimensao/Fatd);
+
       
     //limpeza inicial da tela, para reconstrução
     //somente o canvas superior
@@ -575,9 +580,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([(angRad - CENTO_OITENTA), NovoXZero, NovoYZero, (BASE_Px/14)*3]); //modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([(angRad - CENTO_OITENTA), NovoXZero, NovoYZero, (BASE_Fatd/14)*3]); //modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");
@@ -695,21 +700,23 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var coeficienteAtrito = 0.5; // modificação Canato
-      var coeficienteAtritoMax = Math.tan(angFinal); //modificação Canato
+      var  μd = 0.5; // modificação Canato
+      var  μe = Math.tan(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;
       var px = p * Math.sin(angFinal);
       var py = p * Math.cos(angFinal);
       var n = py;
+      var Fatd = μd*n
+      var Fate = μe*n
       //var fAtrito = py * coeficienteAtrito;
-      var fAtrito = Math.min(py * coeficienteAtrito, px); // modificação Canato
+      var fAtrito = Math.min(Fatd, px); // modificação Canato
       //var a = g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal)));
-      var a = Math.max(g * (Math.sin(angFinal) - (coeficienteAtrito * Math.cos(angFinal))), 0); // modificação Canato
+      var a = Math.max(g * (Math.sin(angFinal) - (μd * Math.cos(angFinal))), 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1), parseFloat(coeficienteAtritoMax).toFixed(1)]; //modificação canato
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
 
   }
 

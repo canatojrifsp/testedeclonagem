@@ -606,9 +606,10 @@ App.aplicacoes = (function ()
 
      // Reta - Fatcinetico (oposto e de menor intensidade que Px) -  modificação Canato
      desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHB[1], "#0fc", 3, "3");
-     desenhaReta(pontoOA[0], pontoOA[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
-     desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
-    escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHB);
+     desenhaReta(pontoOB[0], pontoOB[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
+     desenhaReta(pontoPB[0], pontoPB[1], pontoHB[0], pontoHB[1], "#0fc", 3, "3");
+
+    escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHA, pontoHB);
 
     // Retas Pontilhadas
     var pontoQ = [pontoG[0], pontoG[1]];
@@ -671,9 +672,10 @@ App.aplicacoes = (function ()
     "Fat",
     "#0fc",
     "Bold 14px Trebuchet MS",
-    pontoHA[0] - 5,
-    pontoHA[1] - 5
+    pontoHB[0] - 5,
+    pontoHB[1] - 5
   ]);
+
   }
 
   var calculaForcasAceleracao = function(angFinal){ 

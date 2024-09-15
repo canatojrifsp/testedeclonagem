@@ -78,6 +78,7 @@ App.aplicacoes = (function ()
     aceleracaoAtualParaAnimacao = null;
     BASE_Py = null;
     BASE_Px = null;
+    BASE_Fatd = null;
     initialTime = null;
     currentTime = null;
 

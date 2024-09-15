@@ -486,7 +486,7 @@ App.aplicacoes = (function ()
     var Fat = Math.min(Fatd, px); // modificação Canato
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    BASE_Fat = Math.min((objCanvas.canvasWidth)/(reduzdimensao/(Fat*0.8)), (objCanvas.canvasWidth)/(reduzdimensao/px)); // modificação Canato
+    BASE_Fat = Math.min((objCanvas.canvasWidth)/(reduzdimensao/Fatd), (objCanvas.canvasWidth)/(reduzdimensao/px)); // modificação Canato
 
       
     //limpeza inicial da tela, para reconstrução

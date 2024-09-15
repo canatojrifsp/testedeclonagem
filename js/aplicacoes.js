@@ -86,8 +86,8 @@ App.aplicacoes = (function ()
     currentTime = null;
 
     //constantes para serem usadas pelas funções
-    X_ZERO = objCanvas.canvasWidth/2;
-    Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5;
+    X_ZERO = objCanvas.canvasWidth/2; // pergunta Canato ... onde exatamente esse X_ZERO fica localizado?
+    Y_ZERO = objCanvas.canvasHeight/2 + objCanvas.canvasHeight/5; // pq foi necessária essa conta com Canvas Height?
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
@@ -455,7 +455,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#FFF",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/2 + ((BASE/22)) - 75,
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/2 + ((BASE/22)) - 175,
         380
       ]);
 

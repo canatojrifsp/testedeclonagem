@@ -15,7 +15,7 @@ App.aplicacoes = (function ()
   var BASE;
   var BASE_Py_inicial;
   var BASE_Px_inicial;
-  var BASE_Fat_inicial;
+  var BASE_Fatd_inicial;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -30,7 +30,7 @@ App.aplicacoes = (function ()
   var angRadInicial = TRINTA;
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
-  var Fat_inicial = p_inicial * Math.sin(angRadInicial);
+  var Fatd_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
   // Coordenadas dos pontos para desenhar o corpo sobre o plano
@@ -91,7 +91,7 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Fat_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
+    BASE_Fatd_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
 
 
     document.getElementById("animar").onclick = function() {
@@ -570,25 +570,24 @@ App.aplicacoes = (function ()
     //  a reta Px ... ponto H
     //  a reta Py ... ponto F ... comprimento de E = F e ambos precisam ser menores que G ... ajustando valores em BASE/12 para Peso e BASE/14 para N  e BASE/24 para Px
     // a reta Fat ... ponto HA
-    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]);
-    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]);
-    var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]);
-    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad, NovoXZero, NovoYZero, (BASE_Px/14)*4]);
-
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]);
-    var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
-    var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]);
-    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
-    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]);
-    var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
-    var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([(angRad - CENTO_OITENTA), NovoXZero, NovoYZero, (BASE_Fatd/14)*4]); //modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
+    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto E ... Normal
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto I ... seta Normal
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto J ... seta normal
+    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto F ... Py
+    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto K ... seta Py
+    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto L ... seta py
+    var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]); // ponto G ... Peso  
+    var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto M ... seta Peso
+    var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto N ... seta Peso
+    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad, NovoXZero, NovoYZero, (BASE_Px/14)*4]); // ponto H ... Px
+    var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); // seta Px
+    var pontoP = App.strategiesCalculadora.ponto.calcula([angRad + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); // seta Px
+    var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //ponto HA ... Fate modificação Canato
+    var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto OA ... seta Fate modificação Canato
+    var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto PA ... seta Fate modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/14)*4]); //ponto HB ... Fatd modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //ponto OB ... seta Fatd modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //ponto PB ... seta Fatd modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");

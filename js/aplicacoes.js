@@ -570,22 +570,22 @@ App.aplicacoes = (function ()
     //  a reta Px ... ponto H
     //  a reta Py ... ponto F ... comprimento de E = F e ambos precisam ser menores que G ... ajustando valores em BASE/12 para Peso e BASE/14 para N  e BASE/24 para Px
     // a reta Fat ... ponto HA
-    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto E ... Normal
-    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto I ... seta Normal
-    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto J ... seta normal
-    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto F ... Py
-    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto K ... seta Py
-    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto L ... seta py
-    var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]); // ponto G ... Peso  
-    var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto M ... seta Peso
-    var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto N ... seta Peso
-    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad, NovoXZero, NovoYZero, (BASE_Px/14)*4]); // ponto H ... Px
+    var pontoH = App.strategiesCalculadora.ponto.calcula([angRad, NovoXZero, NovoYZero, (BASE_Px/14)*4]); // ponto H ... Px ... só angRad pois é nossa referência
     var pontoO = App.strategiesCalculadora.ponto.calcula([angRad - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); // seta Px
     var pontoP = App.strategiesCalculadora.ponto.calcula([angRad + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); // seta Px
-    var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //ponto HA ... Fate modificação Canato
+    var pontoE = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto E ... Normal ... -90 para girar no antihorario
+    var pontoI = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto I ... seta Normal
+    var pontoJ = App.strategiesCalculadora.ponto.calcula([angRad - NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto J ... seta normal
+    var pontoF = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA, NovoXZero, NovoYZero, (BASE_Py/14)*4]); // ponto F ... Py ... +90 para girar no horário
+    var pontoK = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto K ... seta Py
+    var pontoL = App.strategiesCalculadora.ponto.calcula([angRad + NOVENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Py/14)*3.5]); // ponto L ... seta py
+    var pontoG = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP, NovoXZero, NovoYZero, (BASE/14)*4]); // ponto G ... Peso  ... -angretaP ... para girar no antihorário (180-270=-30)
+    var pontoM = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP - (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto M ... seta Peso
+    var pontoN = App.strategiesCalculadora.ponto.calcula([angRad - angRetaP + (TRINTA/10), NovoXZero, NovoYZero, (BASE/14)*3.5]); // ponto N ... seta Peso   
+    var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //ponto HA ... Fate  ... -180 para girar no antihorário modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto OA ... seta Fate modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto PA ... seta Fate modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/10)*4]); //ponto HB ... Fatd modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/10)*4]); //ponto HB ... Fatd -180 para girar no antihorario ...  modificação Canato
     var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto OB ... seta Fatd modificação Canato
     var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto PB ... seta Fatd modificação Canato
 
@@ -705,8 +705,8 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var  μd = 0.5; // modificação Canato
-      var  μe = Math.tan(angFinal); //modificação Canato
+      var μd = 0.5; // modificação Canato
+      var μe = Math.tan(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;
@@ -716,7 +716,7 @@ App.aplicacoes = (function ()
       var Fatd = μd*n
       var Fate = μe*n
       var fAtrito = Math.min(Fatd, px); // modificação Canato
-      var a = Math.max(g * (Math.sin(angFinal) - (μd * Math.cos(angFinal))), 0); // modificação Canato
+      var a = Math.max(Px/massa) - (Fatd/massa, 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(fAtrito).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato

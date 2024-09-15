@@ -469,7 +469,7 @@ App.aplicacoes = (function ()
     var Fate = μe*n
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    BASE_Fatd = (objCanvas.canvasWidth)/(reduzdimensao/Fatd);
+    // BASE_Fatd = (objCanvas.canvasWidth)/(reduzdimensao/Fatd); modificação Canato
 
       
     //limpeza inicial da tela, para reconstrução
@@ -581,9 +581,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([(angRad - CENTO_OITENTA), NovoXZero, NovoYZero, (BASE_Fatd/14)*3]); //modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([(angRad - CENTO_OITENTA), NovoXZero, NovoYZero, (BASE_Px/14)*3]); //modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");

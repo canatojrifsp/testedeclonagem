@@ -585,9 +585,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //ponto HA ... Fate modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto OA ... seta Fate modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //ponto PA ... seta Fate modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/14)*4]); //ponto HB ... Fatd modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //ponto OB ... seta Fatd modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/14)*3.5]); //ponto PB ... seta Fatd modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Fatd/10)*4]); //ponto HB ... Fatd modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto OB ... seta Fatd modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Fatd/10)*3.5]); //ponto PB ... seta Fatd modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");

@@ -575,6 +575,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*3]); //modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");
@@ -596,12 +599,16 @@ App.aplicacoes = (function ()
     desenhaReta(pontoM[0], pontoM[1], pontoG[0], pontoG[1], "#DAA520", 3, "3");
     desenhaReta(pontoN[0], pontoN[1], pontoG[0], pontoG[1], "#DAA520", 3, "3");
 
-    // Reta - Fat (oposto a Px) -  modificação Canato
+    // Reta - Fatestatico (oposto e de mesma intensidade a Px) -  modificação Canato
     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHA[1], "#0fc", 3, "3");
     desenhaReta(pontoOA[0], pontoOA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
     desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
 
-    escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHA);
+     // Reta - Fatcinetico (oposto e de menor intensidade que Px) -  modificação Canato
+     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHB[1], "#0fc", 3, "3");
+     desenhaReta(pontoOA[0], pontoOA[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
+     desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
+    escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHB);
 
     // Retas Pontilhadas
     var pontoQ = [pontoG[0], pontoG[1]];
@@ -613,7 +620,7 @@ App.aplicacoes = (function ()
     desenhaReta(pontoQ[0], pontoQ[1], pontoS[0], pontoS[1], "#DAA520", 1, "3");
   }
 
-  var escreveForcas = function (pontoE, pontoF, pontoG, pontoH, pontoHA){
+  var escreveForcas = function (pontoE, pontoF, pontoG, pontoH, pontoHA, pontoHB){
     App.strategiesTela.construtorTexto.executa([
       "3",
       "N",
@@ -650,7 +657,7 @@ App.aplicacoes = (function ()
       pontoG[1] + 10
     ]);
   
-  App.strategiesTela.construtorTexto.executa([
+  App.strategiesTela.construtorTexto.executa([ // modificação Canato
     "3",
     "Fat",
     "#0fc",
@@ -659,6 +666,14 @@ App.aplicacoes = (function ()
     pontoHA[1] - 5
   ]);
 
+  App.strategiesTela.construtorTexto.executa([ // modificação Canato
+    "3",
+    "Fat",
+    "#0fc",
+    "Bold 14px Trebuchet MS",
+    pontoHA[0] - 5,
+    pontoHA[1] - 5
+  ]);
   }
 
   var calculaForcasAceleracao = function(angFinal){ 

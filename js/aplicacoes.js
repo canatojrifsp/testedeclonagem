@@ -15,6 +15,7 @@ App.aplicacoes = (function ()
   var BASE;
   var BASE_Py_inicial;
   var BASE_Px_inicial;
+  var BASE_Fat_inicial;
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -29,6 +30,7 @@ App.aplicacoes = (function ()
   var angRadInicial = TRINTA;
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
+  var Fat_inicial = p_inicial * Math.sin(angRadInicial);
   var reduzdimensao = 250;
   
   // Coordenadas dos pontos para desenhar o corpo sobre o plano
@@ -89,6 +91,8 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
+    BASE_Fat_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
+
 
     document.getElementById("animar").onclick = function() {
       animarBloco();    

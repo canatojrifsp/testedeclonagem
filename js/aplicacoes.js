@@ -91,7 +91,7 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Fatd_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
+    BASE_Fatd_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fatd_inicial);
 
 
     document.getElementById("animar").onclick = function() {

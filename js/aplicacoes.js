@@ -346,7 +346,7 @@ App.aplicacoes = (function ()
 
     var calculos = calculaForcasAceleracao((30*CENTO_OITENTA)/180);  
     // linha a seguir determina quantas variáveis calculadas podem ficar visíveis na tela  
-    reescreve(30, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6]); //modificação Canato
+    reescreve(30, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6], calculos[7]); //modificação Canato
     
     // Guarda dados iniciais para animação
     aceleracaoAtualParaAnimacao = calculos[4];
@@ -455,7 +455,7 @@ App.aplicacoes = (function ()
         mensagem,
         "#FFF",
         "Bold 16px Trebuchet MS",
-        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/5 + ((BASE/22)) - 45,
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/5 + ((BASE/22)) - 20,
         380
       ]);
 
@@ -950,7 +950,7 @@ App.aplicacoes = (function ()
       var ponto = App.strategiesCalculadora.ponto.calcula([angRad, X_ZERO, Y_ZERO, BASE]);
       reDesenha(ponto[0], ponto[1], angRad);
       // linha a seguir determina quantas variáveis calculadas podem ficar visíveis na tela  
-      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6]); //modificação Canato
+      reescreve(angFinal-180, calculos[0], calculos[1], calculos[2], calculos[3], calculos[4], calculos[5], calculos[6], calculos[7]); //modificação Canato
 
       var velocidadeTexto = "V = 0.0 m/s";
       App.strategiesTela.construtorTexto.executa([

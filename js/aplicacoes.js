@@ -867,7 +867,7 @@ App.aplicacoes = (function ()
     ]);
 
     document.getElementById("animar").disabled = false;
-    document.getElementById("voltar").disabled = true;
+    document.getElementById("voltar").disabled = false;
 
     ajustaKeyDown();
   }

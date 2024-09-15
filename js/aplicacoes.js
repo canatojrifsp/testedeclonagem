@@ -312,7 +312,7 @@ App.aplicacoes = (function ()
         358
       ]);
 
-      mensagem = "Coef Atr Cin μ = 0,01"; // modificação Canato
+      mensagem = "Coef Atr Din μd = "; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -322,7 +322,7 @@ App.aplicacoes = (function ()
         380
       ]);
     
-      mensagem = "Coef Atr Est μ = "; // modificação Canato
+      mensagem = "Coef Atr Est μe = "; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -362,7 +362,7 @@ App.aplicacoes = (function ()
     ]);
   }
   
-  var reescreve = function(angulo, p, px, py, n, a, Fat, coeficienteAtritoMax){ //modificação Canato
+  var reescreve = function(angulo, p, px, py, n, a, Fat, μd){ //modificação Canato
 
     // Guarda para a animação
     anguloRadAtualParaAnimacao = (angulo*CENTO_OITENTA)/180;
@@ -439,7 +439,17 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = coeficienteAtritoMax; //modificação Canato
+      mensagem = μe; //modificação Canato
+      App.strategiesTela.construtorTexto.executa([
+        "1",
+        mensagem,
+        "#FFF",
+        "Bold 16px Trebuchet MS",
+        objCanvas.canvasWidth/2 + objCanvas.canvasWidth/22 + ((BASE/22)) - 25,
+        380
+      ]);
+
+      mensagem = μd; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,
@@ -464,7 +474,7 @@ App.aplicacoes = (function ()
     var massa = 10;
     var g = 9.8;
     var μd = 0.5; // coef atrito dinamico modificação Canato
-    var μe = Math.tan(angFinal); //coeficiente atrito estatico para c;aculo da máxima Fatesttatica modificação Canato
+    var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
@@ -720,7 +730,7 @@ App.aplicacoes = (function ()
       var a = Math.max(px/massa) - (Fatd/massa, 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μd).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
 
   }
 

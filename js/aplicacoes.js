@@ -475,7 +475,7 @@ App.aplicacoes = (function ()
     var massa = 10;
     var g = 9.8;
     var μd = 0.2; // coef atrito dinamico modificação Canato
-    var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica modificação Canato
+    var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica ... modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
@@ -483,7 +483,14 @@ App.aplicacoes = (function ()
     var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato ... pois enquanto Px < Fatmax, Fat = Px e a = 0; depois Fr = Px-Fat
     var Fatd = μd*n
     var Fate = μe*n
-    var Fat = Math.min(Fatd, px); // modificação Canato
+    // var Fat = Math.min(Fatd, px); // modificação Canato
+    var Fat
+    if(Fatd<=Fate){  
+      Fat=px;
+     }
+     else{
+       Fat=Fatd;      
+     }
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
     BASE_Fat = Math.max((objCanvas.canvasWidth)/(reduzdimensao/Fatd), (objCanvas.canvasWidth)/(reduzdimensao/px)); // modificação Canato
@@ -727,7 +734,14 @@ App.aplicacoes = (function ()
       var n = py;
       var Fatd = μd*n
       var Fate = μe*n
-      var Fat = Math.min(Fatd, px); // modificação Canato
+      var Fat
+    if(Fatd<=Fate){  
+      Fat=px;
+     }
+     else{
+       Fat=Fatd;      
+     }
+    //  var Fat = Math.min(Fatd, px); // modificação Canato
       var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas

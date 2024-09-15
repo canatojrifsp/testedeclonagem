@@ -767,7 +767,7 @@ App.aplicacoes = (function ()
   var animarBloco = function (){
 
     document.getElementById("animar").disabled = true;
-    document.getElementById("voltar").disabled = true;
+    document.getElementById("voltar").disabled = false;
 
     //desvincula os eventos existentes (todos os keydowns)
     objCanvas.doc.unbind("keydown");
@@ -819,7 +819,7 @@ App.aplicacoes = (function ()
     ]);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
-    var parar = pontoA1[1] >= Y_ZERO + 60 || pontoA1[0] >= X_ZERO + 60;
+    var parar = pontoA1[1] >= Y_ZERO + 60 || pontoA1[0] >= X_ZERO + 60; // modificaçao Canato para terminar a animação um pouco antes
 
     if(parar){ // TODO Fazer a validação correta aqui 
      document.getElementById("voltar").disabled = false;

@@ -822,9 +822,7 @@ App.aplicacoes = (function ()
     var parar = pontoA1[1] >= Y_ZERO + 150 || pontoA1[0] >= X_ZERO + 200;
 
     if(parar){ // TODO Fazer a validação correta aqui 
-     // document.getElementById("voltar").disabled = false;
-      document.getElementById("voltar").disabled = true;
-
+     document.getElementById("voltar").disabled = false;
     }
     else{
       animacao = requestAnimationFrame(animarBloco);      

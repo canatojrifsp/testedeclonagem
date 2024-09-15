@@ -480,7 +480,7 @@ App.aplicacoes = (function ()
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
     var n = p * Math.cos(angRad);
-    var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato
+    var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato ... pois enquanto Px < Fatmax, Fat = Px e a = 0; depois Fr = Px-Fat
     var Fatd = μd*n
     var Fate = μe*n
     var Fat = Math.min(Fatd, px); // modificação Canato

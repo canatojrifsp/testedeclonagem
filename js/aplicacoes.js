@@ -322,7 +322,7 @@ App.aplicacoes = (function ()
         380
       ]);
     
-      mensagem = "Coef Atr Est μe = "; // modificação Canato
+      mensagem = "Coef Atr Est ue = "; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "2",
         mensagem,
@@ -439,7 +439,7 @@ App.aplicacoes = (function ()
         310
       ]);
       
-      mensagem = μe; //modificação Canato
+      mensagem = ue; //modificação Canato
       App.strategiesTela.construtorTexto.executa([
         "1",
         mensagem,
@@ -474,14 +474,14 @@ App.aplicacoes = (function ()
     var massa = 10;
     var g = 9.8;
     var μd = 0.5; // coef atrito dinamico modificação Canato
-    var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica modificação Canato
+    var ue = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica modificação Canato
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
     var n = p * Math.cos(angRad);
     var a = g * Math.sin(angRad);
     var Fatd = μd*n
-    var Fate = μe*n
+    var Fate = ue*n
     var Fat = Math.min(Fatd, px); // modificação Canato
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
@@ -717,7 +717,7 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var μd = 0.5; // modificação Canato
-      var μe = Math.tan(angFinal); //modificação Canato
+      var ue = Math.tan(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;
@@ -725,12 +725,12 @@ App.aplicacoes = (function ()
       var py = p * Math.cos(angFinal);
       var n = py;
       var Fatd = μd*n
-      var Fate = μe*n
+      var Fate = ue*n
       var Fat = Math.min(Fatd, px); // modificação Canato
       var a = Math.max(px/massa) - (Fatd/massa, 0); // modificação Canato
 
       // parseFloat define quantas casas decimais são exibidas
-      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μd).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato
+      return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μd).toFixed(1), parseFloat(ue).toFixed(1)]; //modificação canato
 
   }
 

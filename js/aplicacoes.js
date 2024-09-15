@@ -575,9 +575,9 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
-    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
-    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero*0.5, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
+    var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
+    var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
 
     // Reta - Força N e seta
     desenhaReta(NovoXZero, NovoYZero, pontoE[0], pontoE[1], "#0F0", 3, "3");
@@ -605,9 +605,9 @@ App.aplicacoes = (function ()
     desenhaReta(pontoPA[0], pontoPA[1], pontoHA[0], pontoHA[1], "#0fc", 3, "3");
 
      // Reta - Fatcinetico (oposto e de menor intensidade que Px) -  modificação Canato
-     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHB[1], "#0fc", 3, "3");
-     desenhaReta(pontoOB[0], pontoOB[1], pontoHA[0], pontoHB[1], "#0fc", 3, "3");
-     desenhaReta(pontoPB[0], pontoPB[1], pontoHB[0], pontoHB[1], "#0fc", 3, "3");
+     desenhaReta(NovoXZero, NovoYZero, pontoHA[0], pontoHB[1], "#fff", 3, "3");
+     desenhaReta(pontoOB[0], pontoOB[1], pontoHA[0], pontoHB[1], "#fff", 3, "3");
+     desenhaReta(pontoPB[0], pontoPB[1], pontoHB[0], pontoHB[1], "#fff", 3, "3");
 
     escreveForcas(pontoE, pontoF, pontoG, pontoH, pontoHA, pontoHB);
 

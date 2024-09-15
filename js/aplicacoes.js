@@ -575,7 +575,7 @@ App.aplicacoes = (function ()
     var pontoHA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
     var pontoPA = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*3.5]); //modificação Canato
-    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*3]); //modificação Canato
+    var pontoHB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA, NovoXZero, NovoYZero, (BASE_Px/14)*4]); //modificação Canato
     var pontoOB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA - (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
     var pontoPB = App.strategiesCalculadora.ponto.calcula([angRad - CENTO_OITENTA + (TRINTA/10), NovoXZero, NovoYZero, (BASE_Px/14)*2.5]); //modificação Canato
 

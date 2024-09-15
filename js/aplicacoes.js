@@ -660,7 +660,7 @@ App.aplicacoes = (function ()
   
   App.strategiesTela.construtorTexto.executa([ // modificação Canato
     "3",
-    "Fat",
+    "Fatest",
     "#0fc",
     "Bold 14px Trebuchet MS",
     pontoHA[0] - 5,
@@ -669,7 +669,7 @@ App.aplicacoes = (function ()
 
   App.strategiesTela.construtorTexto.executa([ // modificação Canato
     "3",
-    "Fat",
+    "Fatcin",
     "#0fc",
     "Bold 14px Trebuchet MS",
     pontoHB[0] - 5,

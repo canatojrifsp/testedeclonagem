@@ -894,6 +894,16 @@ App.aplicacoes = (function ()
       100,
       380
     ]);
+    
+    velocidadeTexto = "S = 0 m";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      250,
+      380
+    ]);
 
     document.getElementById("animar").disabled = false;
     document.getElementById("voltar").disabled = true;

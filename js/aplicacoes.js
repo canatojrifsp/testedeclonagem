@@ -486,7 +486,7 @@ App.aplicacoes = (function ()
     var Fate = μe*n
     // var Fat = Math.min(Fatd, px); // modificação Canato
     // var Fat
-    if(μd <= μe){  
+    if(μd >= μe){  
       var Fat = px;
      }
      else{
@@ -737,7 +737,7 @@ App.aplicacoes = (function ()
       var Fatd = μd*n
       var Fate = μe*n
       //var Fat
-    if(μd <= μe){  
+    if(μd >= μe){  
       var Fat = px;
      }
      else{

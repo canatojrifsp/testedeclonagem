@@ -486,10 +486,10 @@ App.aplicacoes = (function ()
     // var Fat = Math.min(Fatd, px); // modificação Canato
     // var Fat
     if(Fatd<Fate){  
-      var Fat=px;
+      var Fat = px;
      }
      else{
-       var Fat=Fatd;      
+       var Fat = Fatd;      
      }
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
@@ -735,11 +735,11 @@ App.aplicacoes = (function ()
       var Fatd = μd*n
       var Fate = μe*n
       //var Fat
-    if(Fatd<Fate){  
-      var Fat=px;
+    if(Fatd < Fate){  
+      var Fat = px;
      }
      else{
-       var Fat=Fatd;      
+       var Fat = Fatd;      
      }
     //  var Fat = Math.min(Fatd, px); // modificação Canato
       var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato

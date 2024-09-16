@@ -779,9 +779,8 @@ App.aplicacoes = (function ()
     var co = seno * (S * 3779.527559); // Somar à coordenada Y dos pontos para redesenhar
     
     var velocidade = 0 + (aceleracaoAtualParaAnimacao * t);
-    var posicao = 0 + 0 + (aceleracaoAtualParaAnimacao * t *t /2);
 
-    return [ca, co, velocidade.toFixed(2),posicao.toFixed(2)];
+    return [ca, co, velocidade.toFixed(2),S.toFixed(2)];
   }
 
   var animarBloco = function (){
@@ -838,15 +837,15 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "s = " + posicao + " m";
-    App.strategiesTela.construtorTexto.executa([
-      "3",
-      velocidadeTexto,
-      "#FFF",
-      "Bold 20px Trebuchet MS",
-      250,
-      380
-    ]);
+    //velocidadeTexto = "s = " + posicao + " m";
+    //App.strategiesTela.construtorTexto.executa([
+    //  "3",
+    //  velocidadeTexto,
+    //  "#FFF",
+    //  "Bold 20px Trebuchet MS",
+    //  250,
+    //  380
+    //]);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
     var parar = pontoA1[1] >= Y_ZERO + 60 || pontoA1[0] >= X_ZERO + 60; // modificaçao Canato para terminar a animação um pouco antes

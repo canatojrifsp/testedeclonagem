@@ -375,6 +375,16 @@ App.aplicacoes = (function ()
       250,
       380
     ]);
+
+    velocidadeTexto = "t = 0 s";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      350,
+      380
+    ]);
   }
   
   var reescreve = function(angulo, p, px, py, n, a, Fat, μd, μe){ //modificação Canato
@@ -780,7 +790,7 @@ App.aplicacoes = (function ()
     
     var velocidade = 0 + (aceleracaoAtualParaAnimacao * t);
 
-    return [ca, co, velocidade.toFixed(2),S.toFixed(3)];
+    return [ca, co, velocidade.toFixed(2),S.toFixed(3),t.toFixed(4)];
   }
 
   var animarBloco = function (){
@@ -847,15 +857,15 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    //velocidadeTexto = "s = " + posicao + " m";
-    //App.strategiesTela.construtorTexto.executa([
-    //  "3",
-    //  velocidadeTexto,
-    //  "#FFF",
-    //  "Bold 20px Trebuchet MS",
-    //  250,
-    //  380
-    //]);
+    var velocidadeTexto = "t = " + deslocamentoEVelocidade[4] + " m";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      250,
+      380
+    ]);
 
     // Solicita a próxima animação somente enquanto o bloco estiver no limite do plano inclinado
     var parar = pontoA1[1] >= Y_ZERO + 60 || pontoA1[0] >= X_ZERO + 60; // modificaçao Canato para terminar a animação um pouco antes
@@ -1020,6 +1030,26 @@ App.aplicacoes = (function ()
         100,
         380
       ]);
+      
+      velocidadeTexto = "S = 0 m";
+      App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      250,
+      380
+    ]);
+
+    velocidadeTexto = "t = 0 s";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      350,
+      380
+    ]);
 
       anguloRadAtualParaAnimacaoCorrigido = angRad;
     });

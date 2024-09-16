@@ -828,13 +828,23 @@ App.aplicacoes = (function ()
     // Desenha as forças
     desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py, BASE_Fat);
 
-    var velocidadeTexto = "V = " + velocidade + " m/s";
+    var velocidadeTexto = "V = " + deslocamentoEVelocidade[2] + " m/s";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
       100,
+      380
+    ]);
+
+    velocidadeTexto = "s = " + posicao[2] + " m";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      250,
       380
     ]);
 

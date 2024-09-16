@@ -473,7 +473,7 @@ App.aplicacoes = (function ()
         objCanvas.canvasWidth/2 + objCanvas.canvasWidth/2 + ((BASE/22)) - 135,
         380
       ]);
-
+      
   }
 
   //Recebe as coordenadas para calcular o novo ponto
@@ -780,7 +780,7 @@ App.aplicacoes = (function ()
     
     var velocidade = 0 + (aceleracaoAtualParaAnimacao * t);
 
-    return [ca, co, velocidade.toFixed(2),S.toFixed(2)];
+    return [ca, co, velocidade.toFixed(2),S.toFixed(3)];
   }
 
   var animarBloco = function (){
@@ -834,6 +834,16 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 20px Trebuchet MS",
       100,
+      380
+    ]);
+
+    var velocidadeTexto = "s = " + deslocamentoEVelocidade[3] + " m";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      250,
       380
     ]);
 

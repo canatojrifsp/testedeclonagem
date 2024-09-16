@@ -838,7 +838,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "s = " + posicao[2] + " m";
+    velocidadeTexto = "s = " + posicao + " m";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,

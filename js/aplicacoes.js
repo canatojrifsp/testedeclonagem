@@ -16,6 +16,7 @@ App.aplicacoes = (function ()
   var BASE_Py_inicial;
   var BASE_Px_inicial;
   var BASE_Fat_inicial;
+  // var BASE_Fapoio; modificação Canato; em estudo ... para simular a força de um apoio amparando o bloco no início
   
   //Constantes numéricas - ângulos principais
   var CENTO_OITENTA = Math.PI;
@@ -30,7 +31,9 @@ App.aplicacoes = (function ()
   var angRadInicial = TRINTA;
   var py_inicial = p_inicial * Math.cos(angRadInicial);
   var px_inicial = p_inicial * Math.sin(angRadInicial);
-  var Fat_inicial = p_inicial * Math.sin(angRadInicial);
+  var Fat_inicial = p_inicial * Math.sin(angRadInicial); // modificação Canato; a ver a necessidade dessa linha
+ // var Fapoio_inicial = p_inicial * Math.sin(angRadInicial); // modificação Canato; em estudo ... para simular a força de um apoio amparando o bloco no início
+
   var reduzdimensao = 250;
   
   // Coordenadas dos pontos para desenhar o corpo sobre o plano
@@ -46,6 +49,7 @@ App.aplicacoes = (function ()
   var BASE_Py;
   var BASE_Px;
   var BASE_Fat;
+  //var BASE_Fapoio; // modificação Canato; em estudo ... para simular a força de um apoio amparando o bloco no início
   var animacao;
 
   // Variáveis para animação
@@ -82,6 +86,7 @@ App.aplicacoes = (function ()
     BASE_Py = null;
     BASE_Px = null;
     BASE_Fat = null; // modificação Canato
+   // BASE_Fapoio = null // modificação Canato; em estudo ... para simular a força de um apoio amparando o bloco no início
     initialTime = null;
     currentTime = null;
 
@@ -91,8 +96,8 @@ App.aplicacoes = (function ()
     BASE = (objCanvas.canvasWidth)/(reduzdimensao/p_inicial);
     BASE_Py_inicial = (objCanvas.canvasWidth)/(reduzdimensao/py_inicial);
     BASE_Px_inicial = (objCanvas.canvasWidth)/(reduzdimensao/px_inicial);
-    BASE_Fat_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial);
-
+    BASE_Fat_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fat_inicial); // modificação Canato
+    //BASE_Fapoio_inicial = (objCanvas.canvasWidth)/(reduzdimensao/Fapoio_inicial); // modificação Canato; em estudo ... para simular a força de um apoio amparando o bloco no início
 
     document.getElementById("animar").onclick = function() {
       animarBloco();    
@@ -358,6 +363,16 @@ App.aplicacoes = (function ()
       "#FFF",
       "Bold 20px Trebuchet MS",
       100,
+      380
+    ]);
+
+   velocidade texto = "S = 0";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      120,
       380
     ]);
   }
@@ -764,8 +779,9 @@ App.aplicacoes = (function ()
     var co = seno * (S * 3779.527559); // Somar à coordenada Y dos pontos para redesenhar
     
     var velocidade = 0 + (aceleracaoAtualParaAnimacao * t);
+    var posicao = 0 + 0 + (aceleracaoAtualParaAnimacao * t *t /2);
 
-    return [ca, co, velocidade.toFixed(2)];
+    return [ca, co, velocidade.toFixed(2),posicao.toFixed(2)];
   }
 
   var animarBloco = function (){

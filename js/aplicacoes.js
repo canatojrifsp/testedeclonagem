@@ -905,13 +905,23 @@ App.aplicacoes = (function ()
       380
     ]);
     
-    velocidadeTexto = "S = 0 m";
+    velocidadeTexto = "s = 0 m";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
       250,
+      380
+    ]);
+
+    velocidadeTexto = "t = 0 s";
+    App.strategiesTela.construtorTexto.executa([
+      "3",
+      velocidadeTexto,
+      "#FFF",
+      "Bold 20px Trebuchet MS",
+      350,
       380
     ]);
 

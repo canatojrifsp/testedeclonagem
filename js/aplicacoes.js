@@ -372,7 +372,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      300,
+      250,
       380
     ]);
   }

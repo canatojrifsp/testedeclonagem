@@ -828,7 +828,7 @@ App.aplicacoes = (function ()
     // Desenha as forças
     desenhaForcas(anguloRadAtualParaAnimacaoCorrigido, pontoA1, pontoC1, BASE_Px, BASE_Py, BASE_Fat);
 
-    var velocidadeTexto = "V = " + deslocamentoEVelocidade[2] + " m/s";
+    var velocidadeTexto = "V = " + velocidade + " m/s";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,

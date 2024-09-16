@@ -366,8 +366,8 @@ App.aplicacoes = (function ()
       380
     ]);
 
-   velocidadeTexto = "S = 0 m";
-    App.strategiesTela.construtorTexto.executa([
+   velocidadeTexto = "S = 0 m"; // modificação Canato
+    App.strategiesTela.construtorTexto.executa([ 
       "3",
       velocidadeTexto,
       "#FFF",
@@ -376,7 +376,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0 s";
+    velocidadeTexto = "t = 0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -790,7 +790,7 @@ App.aplicacoes = (function ()
     
     var velocidade = 0 + (aceleracaoAtualParaAnimacao * t);
 
-    return [ca, co, velocidade.toFixed(2),S.toFixed(3),t.toFixed(4)];
+    return [ca, co, velocidade.toFixed(2),S.toFixed(3),t.toFixed(4)]; // modificação Canato
   }
 
   var animarBloco = function (){
@@ -847,7 +847,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    var velocidadeTexto = "s = " + deslocamentoEVelocidade[3] + " m";
+    var velocidadeTexto = "s = " + deslocamentoEVelocidade[3] + " m"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -857,7 +857,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    var velocidadeTexto = "t = " + deslocamentoEVelocidade[4] + " s";
+    var velocidadeTexto = "t = " + deslocamentoEVelocidade[4] + " s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -915,7 +915,7 @@ App.aplicacoes = (function ()
       380
     ]);
     
-    velocidadeTexto = "s = 0 m";
+    velocidadeTexto = "s = 0 m"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -925,7 +925,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0 s";
+    velocidadeTexto = "t = 0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -1031,7 +1031,7 @@ App.aplicacoes = (function ()
         380
       ]);
       
-      velocidadeTexto = "S = 0 m";
+      velocidadeTexto = "S = 0 m"; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -1041,7 +1041,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0 s";
+    velocidadeTexto = "t = 0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,

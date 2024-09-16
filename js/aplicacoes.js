@@ -366,7 +366,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-   velocidade texto = "S = 0";
+   velocidadeTexto = "S = 0";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,

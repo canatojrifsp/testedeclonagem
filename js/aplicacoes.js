@@ -488,7 +488,6 @@ App.aplicacoes = (function ()
 
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
-    //if(μd >= μe){(BASE_Fat = objCanvas.canvasWidth)/(reduzdimensao/Fat);}else{(BASE_Fat = objCanvas.canvasWidth)/(reduzdimensao/px);}
     //BASE_Fat = Math.max((objCanvas.canvasWidth)/(reduzdimensao/Fatd), (objCanvas.canvasWidth)/(reduzdimensao/px)); // modificação Canato
     BASE_Fat = (objCanvas.canvasWidth)/(reduzdimensao/Fat);
       

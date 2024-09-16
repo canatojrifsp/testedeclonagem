@@ -475,7 +475,8 @@ App.aplicacoes = (function ()
     var massa = 10;
     var g = 9.8;
     var μd = 0.2; // coef atrito dinamico modificação Canato
-    var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica ... modificação Canato
+    //var μe = Math.tan(angFinal); //coeficiente atrito estatico para cálculo da máxima Fatestatica ... modificação Canato
+    var μe = 0.3;
     var p = massa * g;
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
@@ -725,7 +726,8 @@ App.aplicacoes = (function ()
       Sem atrito.
      */
       var μd = 0.2; // modificação Canato
-      var μe = Math.tan(angFinal); //modificação Canato
+      //var μe = Math.tan(angFinal); //modificação Canato
+      var μe = 0.3;
       var massa = 10.0;
       var g = 9.8;
       var p = massa * g;

@@ -485,7 +485,7 @@ App.aplicacoes = (function ()
     var Fate = μe*n
     // var Fat = Math.min(Fatd, px); // modificação Canato
     // var Fat
-    if(Fatd<Fate){  
+    if(μd <= μe){  
       var Fat = px;
      }
      else{
@@ -724,7 +724,7 @@ App.aplicacoes = (function ()
       Aceleração da Gravidade: 9,8m/s2.
       Sem atrito.
      */
-      var μd = 0.5; // modificação Canato
+      var μd = 0.2; // modificação Canato
       var μe = Math.tan(angFinal); //modificação Canato
       var massa = 10.0;
       var g = 9.8;
@@ -735,7 +735,7 @@ App.aplicacoes = (function ()
       var Fatd = μd*n
       var Fate = μe*n
       //var Fat
-    if(Fatd < Fate){  
+    if(μd <= μe){  
       var Fat = px;
      }
      else{

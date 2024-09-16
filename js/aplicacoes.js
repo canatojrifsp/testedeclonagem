@@ -382,7 +382,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      350,
+      400,
       380
     ]);
   }
@@ -863,7 +863,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      250,
+      400,
       380
     ]);
 
@@ -931,7 +931,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      350,
+      400,
       380
     ]);
 
@@ -1047,7 +1047,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      350,
+      400,
       380
     ]);
 

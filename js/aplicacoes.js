@@ -481,7 +481,7 @@ App.aplicacoes = (function ()
     var px = p * Math.sin(angRad);
     var py = p * Math.cos(angRad);
     var n = p * Math.cos(angRad);
-    var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato ... pois enquanto Px < Fatmax, Fat = Px e a = 0; depois Fr = Px-Fat
+    // var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato ... pois enquanto Px < Fatmax, Fat = Px e a = 0; depois Fr = Px-Fat
     var Fatd = μd*n
     var Fate = μe*n
     // var Fat = Math.min(Fatd, px); // modificação Canato
@@ -492,6 +492,13 @@ App.aplicacoes = (function ()
      else{
        var Fat = Fatd;      
      }
+     
+    if(μd >= μe){
+     var a = 0;
+    }
+    else{var a = (px/massa)-(Fatd/massa);
+    }
+
     BASE_Py = (objCanvas.canvasWidth)/(reduzdimensao/py);
     BASE_Px = (objCanvas.canvasWidth)/(reduzdimensao/px);
     BASE_Fat = Math.max((objCanvas.canvasWidth)/(reduzdimensao/Fatd), (objCanvas.canvasWidth)/(reduzdimensao/px)); // modificação Canato
@@ -744,7 +751,12 @@ App.aplicacoes = (function ()
        var Fat = Fatd;      
      }
     //  var Fat = Math.min(Fatd, px); // modificação Canato
-      var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato
+    //  var a = Math.max(((px/massa) - (Fatd/massa)), 0); // modificação Canato
+      if(μd >= μe){
+        var a = 0;
+      }
+      else{var a = (px/massa)-(Fatd/massa);
+      }
 
       // parseFloat define quantas casas decimais são exibidas
       return [parseFloat(p).toFixed(1), parseFloat(px).toFixed(1), parseFloat(py).toFixed(1), parseFloat(n).toFixed(1), parseFloat(a).toFixed(1), parseFloat(Fat).toFixed(1), parseFloat(μd).toFixed(1), parseFloat(μe).toFixed(1)]; //modificação canato

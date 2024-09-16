@@ -366,7 +366,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-   velocidadeTexto = "S = 0,0 m"; // modificação Canato
+   velocidadeTexto = "S = 0.0 m"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([ 
       "3",
       velocidadeTexto,
@@ -376,7 +376,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0,0 s"; // modificação Canato
+    velocidadeTexto = "t = 0.0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -915,7 +915,7 @@ App.aplicacoes = (function ()
       380
     ]);
     
-    velocidadeTexto = "s = 0,0 m"; // modificação Canato
+    velocidadeTexto = "s = 0.0 m"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -925,7 +925,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0,0 s"; // modificação Canato
+    velocidadeTexto = "t = 0.0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -1031,7 +1031,7 @@ App.aplicacoes = (function ()
         380
       ]);
       
-      velocidadeTexto = "S = 0,0 m"; // modificação Canato
+      velocidadeTexto = "S = 0.0 m"; // modificação Canato
       App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
@@ -1041,7 +1041,7 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    velocidadeTexto = "t = 0,0 s"; // modificação Canato
+    velocidadeTexto = "t = 0.0 s"; // modificação Canato
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,

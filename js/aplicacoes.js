@@ -382,7 +382,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      400,
+      380,
       380
     ]);
   }
@@ -857,13 +857,13 @@ App.aplicacoes = (function ()
       380
     ]);
 
-    var velocidadeTexto = "t = " + deslocamentoEVelocidade[4] + " m";
+    var velocidadeTexto = "t = " + deslocamentoEVelocidade[4] + " s";
     App.strategiesTela.construtorTexto.executa([
       "3",
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      400,
+      380,
       380
     ]);
 
@@ -931,7 +931,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      400,
+      380,
       380
     ]);
 
@@ -1047,7 +1047,7 @@ App.aplicacoes = (function ()
       velocidadeTexto,
       "#FFF",
       "Bold 20px Trebuchet MS",
-      400,
+      380,
       380
     ]);
 
